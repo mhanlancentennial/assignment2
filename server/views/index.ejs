@@ -1,0 +1,57 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to the <%= title %> page.</h1>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="display: table-row;">
+          <div style="width: 500px; display: table-cell; vertical-align: top;">
+            <div>
+              <p>
+                <h5>Hello and welcome to my Express Portfolio.</h5>
+              </p>
+              <p>
+                <h7>
+                  This page was created as a demonstration of Express JS and Node JS Functionality.
+                  <br />
+                    It is my mission to provide top quality software solutions for my clients as I build my business from the ground up.
+                  <br />
+                    The adjacent sections can be navigated to by clicking on the links directly or by clicking the corresponding links in the nav-bar above.
+                </h7>
+              </p>
+            </div>
+          </div>
+          <div>
+            <ul>
+              <li><a href="about">
+                About Me<br />
+              </a>
+                <h8>Read a little about me, Matthew Hanlan.</h8>
+              </li>
+              <li><a href="projects">
+                Projects<br />
+              </a>
+                <h8>Some projects I have worked on and am planning.</h8>
+              </li>
+              <li><a href="services">
+                Services<br />
+              </a>
+                <h8>See services I provide to my customers.</h8>
+              </li>
+              <li><a href="contact">
+                Contact Me<br />
+              </a>
+                <h8>Click here for ways to get in touch.</h8>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

@@ -1,0 +1,30 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"><%= title %></h1>
+      <div class="container">
+        
+      <div><h3>
+        Login:</h3>
+      </div>
+    <form id="login-form" method="POST" action="/login-form">
+        <div class="mb-3">
+            <label for="loginName" class="form-label">Login ID:</label>
+            <input type="text" class="form-control" id="loginName">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+            <button type="submit" class="btn btn-primary">LOGIN</button>
+    </form>
+            
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

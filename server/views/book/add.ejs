@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+        <h1><%= title %></h1>
+        <form class="form" method="POST">
+            <div class="form-group">
+                <label for="nameTextField">Name</label>
+                <input type="text" class="form-control"
+                id ="nameTextField"
+                placeholder="Contact Name"
+                name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneTextField">Phone Number</label>
+                <input type="text" class="form-control"
+                id ="phoneTextField"
+                placeholder="Phone Number"
+                name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="emailTextField">Email</label>
+                <input type="email" class="form-control"
+                id ="emailTextField"
+                placeholder="Email Address"
+                name="email" required>
+            </div>
+            
+
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit"></i> SUBMIT
+            </button>
+
+            <a href="/book-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i> CANCEL</a>
+        </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

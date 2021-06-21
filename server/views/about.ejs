@@ -1,0 +1,37 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"> <%= title %> Me:</h1>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="display: table-row;">
+          <div style="width: 500px; display: table-cell; vertical-align: top;">
+            <div>
+              <h2>Matthew K. Hanlan</h2>
+              <p>
+                Hi my name is Matt and I'm a second-semester student at Centennial College enrolled in the Software Engineering Technology Program.<br />
+                I am attending this program in order to extend the services that I can offer my clients as an IT Consultant.<br />
+                I attended Fleming College in Peterborough, Ontario for Computer Security & Investigations as well.
+                My hobbies include reading, writing, jogging, hiking and DIY.
+              </p>
+            </div>
+          </div>
+          <div>
+            <img src="\Assets\images\portrait.jpg" alt="Portrait" style="height:400px;">
+          </div>
+        </div>
+        <div style="display: table-row;">
+          <p class="text-center">
+            <a href="\Assets\files\resume.pdf">
+              Click here to view/download PDF Resume.
+            </a>
+          </p>
+        </div>
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

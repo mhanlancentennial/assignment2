@@ -1,0 +1,49 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Current and Past <%= title %>:</h1>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="display: table-row;">
+          <div style="width: 500px; display: table-cell; vertical-align: top;">
+            <h3>Hanlan IT Services</h3>
+            <p>Hanlan IT Services is my own business that I started in 2014 after graduating from Fleming college.  My offerings include IT Consulting and I specifically focus on security.</p>
+            <p>My plan is to keep growing my business and to expand my offerings by adding to my skillset with my current college program.</p>
+          </div>
+          <div>
+            <img src="\Assets\images\service.png" alt="Portrait" style="width:200px;">
+          </div>
+        </div>
+        <div style="display: table-row;">
+          <div style="width: 500px; display: table-cell; vertical-align: top;">
+            <h3>PCI DSS Auditing Tool</h3>
+            <p>In 2013 I completed a major independent project for my studies at Fleming.  It was an all-Windows-native, PCI DSS Auditng tool for Active Directory</p>
+            <p>The project was a great success and was used for several years thereafter in production use for monitoring clients' environment for compliance with the PCI DSS<br />
+              PCI DSS is the Payment Card Industry Data Security Standard and outlines rules for businesses that deal with financial data on their internal networks.
+            </p>
+          </div>
+          <div>
+            <img src="\Assets\images\security.png" alt="Portrait" style="width:200px;">
+          </div>
+        </div>
+        <div style="display: table-row;">
+          <div style="width: 600px; display: table-cell; vertical-align: top;">
+            <h3>Microsoft Office 365 CLI Tools for MSPs</h3>
+            <p>In 2018 I produced a tool for an small MSP that would more easily facilitate command-line access to Microsofts Office 365 online SaaS platform.</p>
+            <p>It was designed to give technicians more powerful control over online resources such as Azure AD and Exchange Online.<br />
+              It was in production use for at least 2 years, but due to contract obligations terminating, is no longer supported.
+            </p>
+          </div>
+          <div>
+            <img src="\Assets\images\ms_powershell.png" alt="Portrait" style="width:200px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

@@ -1,0 +1,55 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+  <main class="container">
+    <h1><%= title %></h1>
+
+    <% if(typeof displayname == 'string' && displayname) { %>
+      <a href="/book-list/add" class="btn btn-primary" role="button">
+      <i class="fas fa-plus-circle"></i>Add Contact</a>
+    <% } %>
+
+    
+    <table class="table table-hover">
+        <tr class="d-flex">
+          <% if(typeof displayname == 'string' && displayname) { %>
+            <th class="text-center col-2">Name</th>
+            <th class="text-center col-2">Phone</th>
+            <th class="text-center col-2">Email</th>
+            <th class="text-center col-2"></th>
+            <th class="text-center col-2"></th>
+          <% } else { %>
+            <th class="text-center col-4">Name</th>
+            <th class="text-center col-3">Phone</th>
+            <th class="text-center col-3">Email</th>
+          <% } %>
+        </tr>
+        <% BookList.sort() %>
+        <% for (let count=0; count<BookList.length; count++){ %>
+            <tr class="d-flex">
+              <% if(typeof displayname == 'string' && displayname) { %>
+                <td class="text-center col-2"><%= BookList[count].name %></td>
+                <td class="text-center col-2"><%= BookList[count].phone %></td>
+                <td class="text-center col-2"><%= BookList[count].email %></td>
+                <td class="text-center col-2">
+                  <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                  <i class="fas fa-pencil-alt"></i><br/>EDIT</a>
+                </td>
+                <td class="text-center col-2">
+                  <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt"></i><br/>DELETE</a>
+                </td>
+                <% } else { %>
+                  <td class="text-center col-4"><%= BookList[count].name %></td>
+                  <td class="text-center col-3"><%= BookList[count].phone %></td>
+                  <td class="text-center col-3"><%= BookList[count].email %></td>
+                <% } %>
+            </tr>
+        <%}%>
+    </table>
+  </main>
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

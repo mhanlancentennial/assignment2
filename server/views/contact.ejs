@@ -1,0 +1,55 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"><%= title %> Me:</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            Phone:
+          </div>
+          <div class="col">
+            (905) 242-5927
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            Email:
+          </div>
+          <div class="col">
+            mhanlan@my.centennialcollege.ca
+          </div>
+        </div>
+      </div>
+      <div><h3>
+        Send me a message:</h3>
+      </div>
+    <form id="contact-form" method="POST" action="/contact-form">
+      <div class="mb-3">
+        <label for="senderName" class="form-label">Your Name:</label>
+        <input type="text" class="form-control" id="senderName">
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Your Phone Number:</label>
+        <input type="tel" class="form-control" id="phoneNumber" placeholder="555 555 5555">
+      </div>
+      <div class="mb-3">
+        <label for="emailAddress" class="form-label">Your Email Address:</label>
+        <input type="email" class="form-control" id="emailAddress" placeholder="name@domain.com">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Send</button>
+      </div>
+    </form>
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
